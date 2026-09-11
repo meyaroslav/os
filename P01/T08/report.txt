@@ -1,0 +1,19 @@
+yaroslav@MacBook-Air T08 % cat > somescript.sh
+#!/bin/bash
+
+var1=`date`
+echo current date
+echo $var1
+echo path to current directory
+pwd
+echo content of current directory
+ls –la | head
+yaroslav@MacBook-Air T08 % chmod +x somescript.sh
+yaroslav@MacBook-Air T08 % ./somescript.sh 
+current date
+Fri Sep 11 20:47:15 MSK 2026
+path to current directory
+/Users/yaroslav/Documents/os/P01/T08
+content of current directory
+ls: –la: No such file or directory
+yaroslav@MacBook-Air T08 % 

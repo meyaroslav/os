@@ -1,0 +1,32 @@
+yaroslav@MacBook-Air tests % du
+40	./folderC
+72	.
+yaroslav@MacBook-Air tests % du -s
+72	.
+yaroslav@MacBook-Air tests % du -sh
+ 36K	.
+yaroslav@MacBook-Air tests % df
+Filesystem     512-blocks      Used Available Capacity iused      ifree %iused  Mounted on
+/dev/disk3s1s1  965492904  24686032 760844232     4%  458732 3804221160    0%   /
+devfs                 396       396         0   100%     686          0  100%   /dev
+/dev/disk3s6    965492904        40 760844232     1%       0 3804221160    0%   /System/Volumes/VM
+/dev/disk3s2    965492904  17815816 760844232     3%    1504 3804221160    0%   /System/Volumes/Preboot
+/dev/disk3s4    965492904      8360 760844232     1%      64 3804221160    0%   /System/Volumes/Update
+/dev/disk1s2      1126400     12328   1080368     2%       1    5401840    0%   /System/Volumes/xarts
+/dev/disk1s1      1126400     12048   1080368     2%      38    5401840    0%   /System/Volumes/iSCPreboot
+/dev/disk1s3      1126400     11848   1080368     2%     902    5401840    0%   /System/Volumes/Hardware
+/dev/disk3s5    965492904 158604792 760844232    18%  870841 3804221160    0%   /System/Volumes/Data
+map auto_home           0         0         0   100%       0          0     -   /System/Volumes/Data/home
+yaroslav@MacBook-Air tests % df -h
+Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s1s1   460Gi    12Gi   363Gi     4%    459k  3.8G    0%   /
+devfs            198Ki   198Ki     0Bi   100%     686     0  100%   /dev
+/dev/disk3s6     460Gi    20Ki   363Gi     1%       0  3.8G    0%   /System/Volumes/VM
+/dev/disk3s2     460Gi   8.5Gi   363Gi     3%    1.5k  3.8G    0%   /System/Volumes/Preboot
+/dev/disk3s4     460Gi   4.1Mi   363Gi     1%      64  3.8G    0%   /System/Volumes/Update
+/dev/disk1s2     550Mi   6.0Mi   528Mi     2%       1  5.4M    0%   /System/Volumes/xarts
+/dev/disk1s1     550Mi   5.9Mi   528Mi     2%      38  5.4M    0%   /System/Volumes/iSCPreboot
+/dev/disk1s3     550Mi   5.8Mi   528Mi     2%     902  5.4M    0%   /System/Volumes/Hardware
+/dev/disk3s5     460Gi    76Gi   363Gi    18%    871k  3.8G    0%   /System/Volumes/Data
+map auto_home      0Bi     0Bi     0Bi   100%       0     0     -   /System/Volumes/Data/home
+yaroslav@MacBook-Air tests % 

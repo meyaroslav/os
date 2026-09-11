@@ -1,0 +1,39 @@
+yaroslav@MacBook-Air tests % ln -s folderA folderLink
+yaroslav@MacBook-Air tests % ls folderA 
+f1.txt		f2.txt		f3.txt		file1.txt	file2.txt
+yaroslav@MacBook-Air tests % ls folderLink 
+f1.txt		f2.txt		f3.txt		file1.txt	file2.txt
+yaroslav@MacBook-Air tests % ls -ld folderA folderLink 
+drwxr-xr-x  7 yaroslav  staff  224 Sep 11 20:22 folderA
+lrwxr-xr-x  1 yaroslav  staff    7 Sep 11 20:28 folderLink -> folderA
+yaroslav@MacBook-Air tests % cat >> folderLink/filenew.txt
+aaa
+bbb
+ccc
+yaroslav@MacBook-Air tests % ls folderA
+f1.txt		f3.txt		file2.txt
+f2.txt		file1.txt	filenew.txt
+yaroslav@MacBook-Air tests % mv folderA folderB
+yaroslav@MacBook-Air tests % ls -l folderLink
+lrwxr-xr-x  1 yaroslav  staff  7 Sep 11 20:28 folderLink -> folderA
+yaroslav@MacBook-Air tests % ln -s folderB/f1.txt filesymlink.txt
+yaroslav@MacBook-Air tests % ls -l filesymlink.txt 
+lrwxr-xr-x  1 yaroslav  staff  14 Sep 11 20:32 filesymlink.txt -> folderB/f1.txt
+yaroslav@MacBook-Air tests % ln folderB/f1.txt filehardlink.txt
+yaroslav@MacBook-Air tests % ls -l filesymlink.txt filehardlink.txt 
+-rw-r--r--  2 yaroslav  staff   7 Sep 11 20:13 filehardlink.txt
+lrwxr-xr-x  1 yaroslav  staff  14 Sep 11 20:32 filesymlink.txt -> folderB/f1.txt
+yaroslav@MacBook-Air tests % mv folderB folderC
+yaroslav@MacBook-Air tests % ls -l filesymlink.txt filehardlink.txt 
+-rw-r--r--  2 yaroslav  staff   7 Sep 11 20:13 filehardlink.txt
+lrwxr-xr-x  1 yaroslav  staff  14 Sep 11 20:32 filesymlink.txt -> folderB/f1.txt
+yaroslav@MacBook-Air tests % diff folderC/f3.txt folderC/f1.txt 
+2,3d1
+< text text text
+< 123 456 789
+yaroslav@MacBook-Air tests % diff folderC/f1.txt filehardlink.txt 
+yaroslav@MacBook-Air tests % md5sum folderC/f1.txt filehardlink.txt 
+88c6011675791b700dcf87decb7c3983  folderC/f1.txt
+88c6011675791b700dcf87decb7c3983  filehardlink.txt
+yaroslav@MacBook-Air tests % 
+ 

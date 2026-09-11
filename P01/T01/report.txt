@@ -1,0 +1,10 @@
+yaroslav@MacBook-Air T01 % cd /
+yaroslav@MacBook-Air / % ls
+Applications	Volumes		etc		sbin
+Library		bin		home		tmp
+System		cores		opt		usr
+Users		dev		private		var
+yaroslav@MacBook-Air / % pwd
+/
+yaroslav@MacBook-Air / % cd
+yaroslav@MacBook-Air ~ % 

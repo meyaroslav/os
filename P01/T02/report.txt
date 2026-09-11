@@ -1,0 +1,25 @@
+yaroslav@MacBook-Air T02 % man man
+MAN(1)                      General Commands Manual                     MAN(1)
+
+NAME
+     man, apropos, whatis – display online manual documentation pages
+
+SYNOPSIS
+     man [-adho] [-t | -w] [-M manpath] [-P pager] [-S mansect]
+         [-m arch[:machine]] [-p [eprtv]] [mansect] page ...
+
+     man -f [-d] [-M manpath] [-P pager] [-S mansect] keyword ...
+     whatis [-d] [-s mansect] keyword ...
+
+     man -k [-d] [-M manpath] [-P pager] [-S mansect] keyword ...
+     apropos [-d] [-s mansect] keyword ...
+
+DESCRIPTION
+     The man utility finds and displays online manual documentation pages.  If
+     mansect is provided, man restricts the search to the specific section of
+     the manual.
+
+     The sections of the manual are:
+           1.   General Commands Manual
+           2.   System Calls Manual
+:q

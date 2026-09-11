@@ -1,0 +1,10 @@
+yaroslav@MacBook-Air T00 % mkdir 5094
+yaroslav@MacBook-Air T00 % cd 5094
+yaroslav@MacBook-Air 5094 % mkdir ilin
+yaroslav@MacBook-Air 5094 % cd ilin
+yaroslav@MacBook-Air ilin % mkdir yaroslav
+yaroslav@MacBook-Air ilin % cd yaroslav 
+yaroslav@MacBook-Air yaroslav % date -v +mon > filedate.txt
+yaroslav@MacBook-Air yaroslav % cat filedate.txt > result.txt 
+yaroslav@MacBook-Air yaroslav % cat result.txt
+Mon Sep 14 17:22:41 MSK 2026

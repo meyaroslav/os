@@ -1,0 +1,8 @@
+yaroslav@MacBook-Air tests % cp f1.txt file1.txt
+yaroslav@MacBook-Air tests % cp f2.txt file2.txt
+yaroslav@MacBook-Air tests % mkdir folderA
+yaroslav@MacBook-Air tests % mv f*.txt folderA 
+yaroslav@MacBook-Air tests % mkdir -p storage/subfolder/datahere/content
+yaroslav@MacBook-Air tests % rm storage
+rm: storage: is a directory
+yaroslav@MacBook-Air tests % rm -r storage
