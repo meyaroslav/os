@@ -1,0 +1,23 @@
+yaroslav@MacBook-Air T00 % gcc receiver.c -o receiver
+yaroslav@MacBook-Air T00 % gcc sender.c -o sender   
+yaroslav@MacBook-Air T00 % ./sender 
+shmid = 65537
+receiving the memory data: shmid = 65537
+received string is: string in shared memory
+yaroslav@MacBook-Air P03 % ./receiver 65538
+receiving the memory data: shmid = 65538
+received string is: string in shared memory
+yaroslav@MacBook-Air P03 % ipcs -m
+IPC status from <running system> as of Fri Oct  2 16:18:25 MSK 2026
+T     ID     KEY        MODE       OWNER    GROUP
+Shared Memory:
+m  65536 0x00000000 --rw------- yaroslav    staff
+m  65537 0x00000000 --rw------- yaroslav    staff
+m  65538 0x00000000 --rw------- yaroslav    staff
+yaroslav@MacBook-Air P03 % gcc threader.c -lpthread -o threader
+yaroslav@MacBook-Air P03 % ./threader
+Thread 1
+Thread 2
+Thread 1 returns: 5
+Thread 2 returns: 5
+yaroslav@MacBook-Air P03 % 
